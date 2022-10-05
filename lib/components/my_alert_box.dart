@@ -17,35 +17,37 @@ class MyAlertBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.grey[900],
+      backgroundColor: Colors.white,
       content: TextField(
         controller: controller,
-        style: const TextStyle(color: Color.fromRGBO(255, 255, 255, 1)),
+        style: const TextStyle(color: Colors.black),
         decoration: InputDecoration(
           hintText: hintText,
           hintStyle: TextStyle(color: Colors.grey[600]),
           enabledBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white)),
+              borderSide: BorderSide(color: Colors.grey)),
           focusedBorder: const OutlineInputBorder(
-              borderSide: BorderSide(color: Colors.white)),
+              borderSide: BorderSide(color: Colors.grey)),
         ),
       ),
       actions: [
         MaterialButton(
           onPressed: onSave,
-          child: Text(
+          color: Colors.green,
+          elevation: 0,
+          child: const Text(
             "Save",
             style: TextStyle(color: Colors.white),
           ),
-          color: Colors.black,
         ),
         MaterialButton(
+          elevation: 0,
           onPressed: onCancel,
-          child: Text(
+          color: Colors.red,
+          child: const Text(
             "Cancel",
             style: TextStyle(color: Colors.white),
           ),
-          color: Colors.black,
         ),
       ],
     );

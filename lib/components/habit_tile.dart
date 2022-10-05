@@ -25,15 +25,17 @@ class HabitTile extends StatelessWidget {
         endActionPane: ActionPane(
           motion: const StretchMotion(),
           children: [
-            // settings option
+            // edit option
+            SizedBox(width: 5),
             SlidableAction(
               onPressed: settingsTapped,
-              backgroundColor: Colors.grey.shade800,
-              icon: Icons.settings,
+              backgroundColor: Colors.blueAccent,
+              icon: Icons.edit,
               borderRadius: BorderRadius.circular(12),
             ),
 
             // delete option
+            SizedBox(width: 5),
             SlidableAction(
               onPressed: deleteTapped,
               backgroundColor: Colors.red.shade400,
@@ -43,7 +45,7 @@ class HabitTile extends StatelessWidget {
           ],
         ),
         child: Container(
-          padding: EdgeInsets.all(24),
+          padding: EdgeInsets.all(15),
           decoration: BoxDecoration(
             color: Colors.grey[100],
             borderRadius: BorderRadius.circular(12),
@@ -57,7 +59,10 @@ class HabitTile extends StatelessWidget {
               ),
 
               // habit name
-              Text(habitName),
+              Text(
+                habitName,
+                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
+              ),
             ],
           ),
         ),

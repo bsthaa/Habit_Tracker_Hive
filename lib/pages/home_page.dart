@@ -53,7 +53,7 @@ class _HomePageState extends State<HomePage> {
       builder: (context) {
         return MyAlertBox(
           controller: _newHabitNameController,
-          hintText: 'Enter habit name..',
+          hintText: 'Your habit here...',
           onSave: saveNewHabit,
           onCancel: cancelDialogBox,
         );
@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Colors.black,
       floatingActionButton: MyFloatingActionButton(onPressed: createNewHabit),
       body: ListView(
         children: [
